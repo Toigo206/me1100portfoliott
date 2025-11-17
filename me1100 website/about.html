@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="style.js"></script>
+<title>Meet The Team</title>
+<link rel="stylesheet" type="text/css" href="about.css">
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<div class="navbar">
+				<a href="index.html" class="logo">Midday Studios - Tristan Toigo</a>
+			<div class="navbar-right">	
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<div class="dropdown">
+					<button class="dropbtn">Films</button>
+					<div class="dropdown-content">
+						<a href="index.html#allFilmList">All Films</a>
+						<a href="video1.html">Catharsis</a>
+						<a href="video2.html">Dine &amp; Dash</a>
+						<a href="video3.html">Solace</a>
+						<a href="video4.html">Beyond - Trailer</a>
+					</div>
+				</div>
+			</div>
+			</div>
+		</header>
+		<div id="headerTeam">
+			<h2>Meet The Team at Midday Studios</h2>
+		</div>
+		<br>
+		
+		<div class="row">
+			<div class="column">
+				<div class="card">
+					<img src="photos/tristan.png" alt="Tristan Toigo" style="width:100%">
+					<div class="containerPics">
+						<h2>Tristan Toigo</h2>
+						<p class="title">CEO &amp; Founder</p>
+						<p>Creator of Midday Studios. Works in cinematography and post-production, as well as everything else.</p>
+						<p>t.toigo206@gmail.com</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="photos/nick.png" alt="Nick" style="width:100%">
+					<div class="containerPics">
+						<h2>Nick</h2>
+						<p class="title">Sound Engineer</p>
+						<p>Professional boom pole operator and knob adjuster. Also looks good with headphones on.</p>
+						<p>nick@middaystudios.com</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="photos/sean.png" alt="Sean" style="width:100%">
+					<div class="containerPics">
+						<h2>Sean</h2>
+						<p class="title">Director of Photography</p>
+						<p>Shot artist. Setting up shots since 1947. Will stop production to adjust minor details.</p>
+						<p>sean@middaystudios.com</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="photos/cam.png" alt="Cam" style="width:100%">
+					<div class="containerPics">
+						<h2>Cam</h2>
+						<p class="title">Cinematographer</p>
+						<p>Expert camera operator. Very good at hitting the record button and pointing the camera at things.</p>
+						<p>cam@middaystudios.com</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="photos/dan.png" alt="Dan" style="width:100%">
+					<div class="containerPics">
+						<h2>Dan</h2>
+						<p class="title">Editor</p>
+						<p>Quality post-production. Stays locked in the post-production lab, haven't seen him in years.</p>
+						<p>dan@middaystudios.com</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="photos/brad.png" alt="Brad" style="width:100%">
+					<div class="containerPics">
+						<h2>Brad</h2>
+						<p class="title">Screenwriter</p>
+						<p>Creative storytelling extroardinaire. Once wrote an in depth screenplay about underground cupcakes.</p>
+						<p>brad@middaystudios.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="contactForm">
+			<form action="action_page.php">
+				<h2>Contact Us</h2>
+				
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" placeholder="Your name..">
+				
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				
+				<label for="country">Country</label>
+				<select id="country" name="country">
+					<option value="">-Select Country-</option>
+					<option value="canada">Canada</option>
+					<option value="mexico">Mexico</option>
+					<option value="usa">United States</option>
+				</select>
+				
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+				
+				<input type="button" id="submit" value="Submit">
+				<p id="messageFeedback"></p>
+			</form>
+		</div>
+		<footer>
+			Copyright &copy; 2024 by Tristan Toigo
+		</footer>
+	</div>
+</body>
+</html>
