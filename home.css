@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-color: black;
+	text-align: center;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	color: white;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: transparent;
+	font-family: Arial;
+	padding: 0.9em 0.625em;
+}
+
+.navbar a {
+	float: left;
+	font-size: 1.7vh;
+	color: #FFF7E5;
+	text-align: center;
+	padding: 1.4vh 1rem;
+	text-decoration: none;
+	line-height: 2.55vh;
+	border-radius: 0.25em;
+	transition: 0.5s;
+}
+
+.navbar a.logo {
+	font-size: 2.5vh;
+	font-weight: bold;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 1.7vh;
+	border: none;
+	outline: none;
+	color: #FFF7E5;
+	padding: 1.4vh 1em;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+	line-height: 2.55vh;
+	border-radius: 0.25em;
+	transition: 0.5s;
+}
+
+.navbar-right a:hover, .dropdown:hover .dropbtn {
+	background-color: #5C9664;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #F3E6C2;
+	min-width: 5em;
+	box-shadow: 0em 0.5em 1em 0em rgba(0,0,0,0.2);
+	z-index: 1;
+	border-radius: 0.25em;
+}
+
+.dropdown-content a {
+	float: none;
+	color: #333;
+	padding: 0.75em 1em;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	font-size: 1.3vh;
+	transition: 0.5s;
+}
+
+.dropdown-content a:hover {
+	background-color: #5C9664;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.navbar-right {
+	float: right;
+}
