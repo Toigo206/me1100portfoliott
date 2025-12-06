@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	font-size: 12px;
+}
+
+body {
+	background-color: #171717;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	color: white;
+}
+
+.flex-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	background: #171717;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+
+.left { 
+	display:flex;
+	gap:1rem;
+	font-size: 1.2rem;
+}
+
+.left-text {
+	margin-right: 3rem;
+	margin-left: 1rem;
+}
+
+.right { 
+	display:flex;
+	gap:1rem; 
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	font-size: 1.75rem;
+}
+
+.icon {
+	color: white;
+	margin-left: 3rem;
+	margin-right: 1rem;
+	display: flex;
+	align-items: center;
+	transition: 0.2s ease;
+}
+
+.icon:hover {
+	color: #F57C3B;
+	transform: translateY(-0.25rem);
+}
+
+.left a:link {
+	color: currentColor;
+	background-color: transparent;
+	text-decoration: none;
+	transition: 0.2s ease;
+}
+
+.left a:visited {
+	color: currentColor;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.left a:hover {
+	color: #F57C3B;
+	background-color: transparent;
+	text-decoration: none;
+	transform: translateY(-0.25rem);
+	transition: 0.2s ease;
+}
+
+.left a:active {
+	color: currentColor;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.bg-overlay {
+	z-index: -1;
+	background: linear-gradient(
+	to bottom,
+		rgba(17,17,17,1)0%,
+		rgba(17,17,17,0.75)60%,
+		rgba(17,17,17,0.75)70%,
+		rgba(17,17,17,1)100%
+	);
+	position: fixed;
+	pointer-events: none;
+	inset: 0;
+}
+
+.bg-image {
+	position: fixed;
+	background-image: url("photos/lr-fsae.JPG");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -2;
+	inset: 0;
+}
+
+.page-title {
+	text-align: center;
+	margin-top: 8rem;
+}
+
+.page-title h1 {
+	font-size: 4rem;
+}
+
+.project-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+	padding: 2rem 2rem;
+	max-width: 100rem;
+	margin: 0 auto;
+	margin-top: 0rem;
+	opacity: 0;
+  	transition: opacity 3s ease, transform 3s ease;
+  	transform: translateY(20px);
+}
+
+.project-info.show {
+  	opacity: 1;
+  	transform: translateY(0);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+	max-width: 40rem;
+}
+
+.grid-photo {
+    width: 100%;
+    aspect-ratio: 4 / 4;
+    object-fit: cover;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.grid-photo:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0.7rem 2rem rgba(0,0,0,0.3);
+}
+
+.right-text {
+	max-width: 42rem;
+	margin-left: 3rem;
+}
+
+.right-text h1 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.right-text p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 9999;
+}
+
+.lightbox.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Lightbox image */
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0.8rem 2.5rem rgba(0,0,0,0.5);
+}
+
+/* Close button */
+.lightbox .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+.lightbox .close:hover {
+    color: #F57C3B;
+}
+
+.lightbox .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.25s ease;
+    z-index: 10000;
+}
+
+.lightbox .arrow:hover {
+    color: #F57C3B;
+}
+
+.lightbox .left-arrow {
+    left: 2rem;
+}
+
+.lightbox .right-arrow {
+    right: 2rem;
+}
+
+
+footer {
+	text-align: center;
+	margin-top: 2rem;
+}
