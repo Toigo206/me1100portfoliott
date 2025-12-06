@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	font-size: 12px;
+}
+
+body {
+	background-color: #171717;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	color: white;
+}
+
+.flex-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	background: #171717;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+
+.left { 
+	display:flex;
+	gap:1rem;
+	font-size: 1.2rem;
+}
+
+.left-text {
+	margin-right: 3rem;
+	margin-left: 1rem;
+}
+
+.right { 
+	display:flex;
+	gap:1rem; 
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	font-size: 1.75rem;
+}
+
+.icon {
+	color: white;
+	margin-left: 3rem;
+	margin-right: 1rem;
+	display: flex;
+	align-items: center;
+	transition: 0.2s ease;
+}
+
+.icon:hover {
+	color: #F57C3B;
+	transform: translateY(-0.25rem);
+}
+
+.left a:link {
+	color: currentColor;
+	background-color: transparent;
+	text-decoration: none;
+	transition: 0.2s ease;
+}
+
+.left a:visited {
+	color: currentColor;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.left a:hover {
+	color: #F57C3B;
+	background-color: transparent;
+	text-decoration: none;
+	transform: translateY(-0.25rem);
+	transition: 0.2s ease;
+}
+
+.left a:active {
+	color: currentColor;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.bg-overlay {
+	z-index: -1;
+	background: linear-gradient(
+	to bottom,
+		rgba(17,17,17,1)0%,
+		rgba(17,17,17,0.75)60%,
+		rgba(17,17,17,0.75)70%,
+		rgba(17,17,17,1)100%
+	);
+	position: fixed;
+	pointer-events: none;
+	inset: 0;
+}
+
+.bg-image {
+	position: fixed;
+	background-image: url("photos/lr-fsae.JPG");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -2;
+	inset: 0;
+}
+
+.contact-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem; /* below fixed header */
+    padding-bottom: 8rem;
+}
+
+/* Card box */
+.contact-card {
+    background: #171717;
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 50rem;
+    box-shadow: 0 0.8rem 2.5rem rgba(0,0,0,0.35);
+    backdrop-filter: blur(0.8rem);
+    animation: fadeIn 0.6s ease;
+}
+
+.contact-card h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Input groups */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 0.8rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+    background: #2b2b2b;
+    color: white;
+    outline: none;
+    transition: box-shadow 0.25s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    box-shadow: 0px 0px 0.7rem rgba(255, 140, 60, 0.6); /* warm orange glow */
+}
+
+/* Button styling */
+.contact-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #F57C3B;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.contact-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0.7rem 1.7rem rgba(245, 124, 59, 0.45);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(0.8rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+	text-align: center;
+	margin-top: 2rem;
+}
